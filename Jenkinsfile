@@ -4,8 +4,8 @@ node {
           echo 'Checkout Successfull'
     }
     stage('NPM Init') {
-         bat 'rm -rf target'
-                        bat 'npm cache clean'
+       //  bat 'rm -rf target'
+                      //  bat 'npm cache clean'
                         // disabling running postinstall script in dependency packages
                         bat 'npm install --ignore-scripts'
                         bat 'npm update && npm dedupe'
