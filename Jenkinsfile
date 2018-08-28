@@ -1,6 +1,16 @@
 node {
-    stage('Build') {
-       echo 'Build Successfull'
+    stage('Checkout') {
+        checkout scm
+          echo 'Checkout Successfull'
+    }
+    stage('NPM Init') {
+         bat 'rm -rf target'
+                        bat 'npm cache clean'
+                        // disabling running postinstall script in dependency packages
+                        bat 'npm install --ignore-scripts'
+                        bat 'npm update && npm dedupe'
+
+       echo 'NPM Init Successfull'
     }
     stage('Test') {
        echo 'Test Successfull'
