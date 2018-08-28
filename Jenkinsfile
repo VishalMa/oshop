@@ -8,8 +8,9 @@ node {
        //  bat 'rm -rf target'
                       //  bat 'npm cache clean'
                         // disabling running postinstall script in dependency packages
-                        bat 'npm install --ignore-scripts'
-                        bat 'npm update && npm dedupe'
+                    // Enable below to install node modules
+                    //    bat 'npm install --ignore-scripts'
+                     //   bat 'npm update && npm dedupe'
 
        echo 'NPM Init Successfull'
     }
