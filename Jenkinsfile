@@ -1,6 +1,5 @@
 node {
 
-   environment
     stage('Checkout') {
         checkout scm
           echo 'Checkout Successfull'
