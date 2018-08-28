@@ -1,4 +1,6 @@
 node {
+
+   environment
     stage('Checkout') {
         checkout scm
           echo 'Checkout Successfull'
@@ -13,6 +15,7 @@ node {
        echo 'NPM Init Successfull'
     }
     stage('Test') {
+      npm start
        echo 'Test Successfull'
     }
     stage('Deploy') {
