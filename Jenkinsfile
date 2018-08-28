@@ -15,7 +15,7 @@ node {
        echo 'NPM Init Successfull'
     }
     stage('Test') {
-      npm start
+     bat 'npm start'
        echo 'Test Successfull'
     }
     stage('Deploy') {
